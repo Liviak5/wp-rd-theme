@@ -12,7 +12,7 @@
         // The Loop
         if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <article class="jumbotron" <?php post_class()?>>
-                    <h2 class="font__title--medium"><a href="<?php the_permalink()?>"> <?php the_title()?></a></h2>
+                    <h2 class="title--medium"><a href="<?php the_permalink()?>"> <?php the_title()?></a></h2>
                     <p><?php the_content()?></p>
                 </article>
         <?php endwhile;

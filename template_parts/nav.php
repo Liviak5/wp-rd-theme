@@ -1,4 +1,4 @@
-<nav class="front__nav--main clearfix">
+<nav class="nav--main">
     <p><a href="<?php bloginfo('url');?>">home</a></p>
     <?php
     $args = array(

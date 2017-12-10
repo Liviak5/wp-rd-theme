@@ -24,6 +24,10 @@ require_once('library/cpt-books.php');
     }
     add_action('init','myMenus'); // Menus registrieren
 
+/*Add Styles*/
+if (!is_admin()){
 wp_enqueue_style('normalize', get_bloginfo('template_url').'/assets/css/normalize.css');
 wp_enqueue_style('wp', get_bloginfo('template_url').'/assets/css/wp.css');
 wp_enqueue_style('kl_rd_theme', get_bloginfo('template_url').'/assets/css/kl_rd_theme.css');
+wp_enqueue_script('kl_rd_func', get_bloginfo('template_url').'/assets/js/functions.js');
+}

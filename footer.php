@@ -10,6 +10,5 @@
         ?> | <div class="fb-like" data-href="https://rodneydent.ch" data-layout="button_count" data-action="recommend" data-show-faces="true" data-share="true"></div></p>
 </footer>
 <?php wp_footer();?>
-<script src="<?php bloginfo('stylesheet_directory');?>assets/js/functions.js"></script>
 </body>
 </html>

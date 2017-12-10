@@ -1,4 +1,6 @@
-/*font-face*/
+/*
+font-face
+*/
 @font-face{
     font-family: aquiline;
     src: url(../fonts/AquilineTwo.ttf);
@@ -40,48 +42,76 @@ html {
     box-sizing: inherit;
 }
 
-.clearfix:after{
-    clear: both;
-    content:"";
-    display: table;
+.wrapper{
+    display: flex;
+    flex-direction: column;
 }
 
-/**
+/*
 Navigation
  */
-.front__nav--main{
-    display: inline-block;
+.nav--main{
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 50px;
     background-color: #3D3D3D;
     padding: 0 1rem;
+    color: #D3D3D3;
 }
-.front__nav--main p{
-    float: left;
-    line-height: 50px;
+.nav--main p{
     padding-right: 2rem;
 }
 
-.front__nav--main p a{
+.nav--main p a{
     text-decoration: none;
     color: #D3D3D3;
 }
 
-.front__nav--main ul{
+.nav--main ul{
     list-style-type: none;
 }
 
-.front__nav--main ul li{
-    float: left;
-    line-height: 50px;
-}
-
-.front__nav--main ul li a{
+.nav--main ul li a{
     text-decoration: none;
     color: #D3D3D3;
 }
 
-.front__nav--main ul li a:hover{
+.nav--main ul li a:hover{
+    text-decoration: none;
+    color: #95711C;
+}
+
+/*
+Footer
+ */
+footer{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #3D3D3D;
+    padding: 0 1rem;
+    color: #D3D3D3;
+}
+
+footer p a{
+    text-decoration: none;
+    color: #D3D3D3;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: #D3D3D3;
+}
+
+footer ul li a:hover{
     text-decoration: none;
     color: #95711C;
 }
