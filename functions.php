@@ -24,6 +24,17 @@ require_once('library/cpt-books.php');
     }
     add_action('init','myMenus'); // Menus registrieren
 
+/**
+ * Add custom Header img
+ */
+$args = array(
+	'width'         => 980,
+	'height'        => 60,
+	'default-image' => get_template_directory_uri() . '/assets/img/header.jpg',
+	'uploads'       => true,
+);
+add_theme_support( 'custom-header', $args );
+
 /*Add Styles*/
 if (!is_admin()){
 wp_enqueue_style('normalize', get_bloginfo('template_url').'/assets/css/normalize.css');
