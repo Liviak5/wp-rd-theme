@@ -1,13 +1,15 @@
 </div>
-<footer>
-    <div id="fb-root"></div>
-    <p>© 2016 Orlando Kobler | <?php
-        $imp = array(
-            'theme_location' => 'fuss',
-            'menu_class'=> 'fusszeile'
-        );
-        wp_nav_menu($imp);
-        ?> | <div class="fb-like" data-href="https://rodneydent.ch" data-layout="button_count" data-action="recommend" data-show-faces="true" data-share="true"></div></p>
+<footer class="footer">
+    <p>© 2016 Orlando Kobler</p>
+		<?php
+		$imp = array(
+			'theme_location'    =>  'fuss',
+			'menu_class'        =>  'sub-menu__list',
+			'container_class'   => 'sub-menu__wrapper',
+			'link_before'       =>  '| '
+		);
+		wp_nav_menu($imp);
+		?>
 </footer>
 <?php wp_footer();?>
 </body>

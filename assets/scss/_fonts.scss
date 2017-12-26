@@ -1,0 +1,29 @@
+/*
+font-face
+*/
+@font-face{
+  font-family: aquiline;
+  src: url(../fonts/AquilineTwo.ttf);
+  src: url(../fonts/AquilineTwo.eot),
+  url(../fonts/AquilineTwo.svg),
+  url(../fonts/AquilineTwo.woff);
+}
+@font-face{
+  font-family: lato;
+  src: url(../fonts/lato-light.ttf);
+  src: url(../fonts/lato-light.eot),
+  url(../fonts/lato-light.svg),
+  url(../fonts/lato-light.woff);
+}
+
+@font-face{
+  font-family: lato_semi_bold;
+  src: url(../fonts/lato-semibold.ttf);
+  src: url(../fonts/lato-semibold.eot),
+  url(../fonts/lato-semibold.svg),
+  url(../fonts/lato-semibold.woff);
+}
+
+$basetype:lato, verdana, sans-serif;
+$title:aquiline;
+$subtitle:lato_semi_bold;
