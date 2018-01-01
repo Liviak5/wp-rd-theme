@@ -3,6 +3,7 @@
  * include Custom Post Type
  */
 require_once('library/cpt-books.php');
+require_once('library/cpt-storytelling.php');
 
 /**
  * register Sidebars
@@ -34,6 +35,15 @@ $args = array(
 	'uploads'       => true,
 );
 add_theme_support( 'custom-header', $args );
+
+/**
+ * Add custom Background Img
+ */
+$args=array(
+	'default-image' => get_template_directory_uri() . '/assets/img/himmel_hell.jpg',
+	'uploads'       => true
+);
+add_theme_support( 'custom-background',$args );
 
 /*
  * add post-images

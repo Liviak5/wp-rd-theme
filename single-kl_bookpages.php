@@ -23,15 +23,23 @@
 			        echo '<h2 class="post__title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h2>';
 			        the_content();
 			        echo '</article>';
-			        echo '<aside class="content__sidebar">';
-			        the_post_thumbnail('kl-rd__postimage');
-			        echo '</aside>';
 			        $backgroundimage = get_field( 'hintergrundbild' );
 		        }
 	        }
 	        ?>
         </section>
+        <aside class="sidebar">
+	        <?php if( get_field('cover') ): ?>
+                <img class="sidebar__image" src="<?php the_field('cover'); ?>" />
+	        <?php endif; ?>
+
+	        <?php if( get_field('pdf-download') ): ?>
+                <h2 class="post__title">Buchdownload</h2>
+                <a href="<?php the_field('pdf-download'); ?>" target="_blank">Download File</a>
+	        <?php endif; ?>
+        </aside>
     </main>
+
     <style>
         body {
             background: url("<?php
