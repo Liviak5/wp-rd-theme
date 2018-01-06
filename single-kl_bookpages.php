@@ -7,7 +7,7 @@
     <header class="header">
         <h1 class="main-title">
 			<?php if (is_page()){wp_title('');}
-			else if (is_single()){single_post_title();}
+			elseif (is_single()){single_post_title();}
 			else {single_cat_title();}?>
         </h1>
     </header>
@@ -29,7 +29,7 @@
 	        ?>
         </section>
         <aside class="sidebar">
-	        <?php if( get_field('cover') ): ?>
+	        <?php if( get_field('cover')): ?>
                 <img class="sidebar__image" src="<?php the_field('cover'); ?>" />
 	        <?php endif; ?>
 
@@ -37,9 +37,14 @@
                 <h2 class="post__title">Buchdownload</h2>
                 <a href="<?php the_field('pdf-download'); ?>" target="_blank">Download File</a>
 	        <?php endif; ?>
+            <br><br>
+            <?php if( get_field('link') ): ?>
+                <h2 class="post__title">Leseprobe</h2>
+                <?php the_field('link')?>
+            <?php endif; ?>
         </aside>
+        <div class="content__spacer"><br><br><br></div>
     </main>
-
     <style>
         body {
             background: url("<?php

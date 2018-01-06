@@ -1,5 +1,4 @@
-<nav class="navigation">
-    <p class="navigation__paragraph"><a class="navigation__link" href="<?php bloginfo('url');?>">home</a></p>
+<nav class="navigation clearfix">
     <?php
     $args = array(
         'theme_location'    => 'hauptmenu',

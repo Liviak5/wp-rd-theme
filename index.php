@@ -7,7 +7,7 @@
     <header class="header">
         <h1 class="main-title">
 			<?php if (is_page()){wp_title('');}
-			else if (is_single()){single_post_title();}
+			elseif (is_single()){single_post_title();}
 			else {single_cat_title();}?>
         </h1>
     </header>
@@ -23,15 +23,17 @@
 			        echo '<h2 class="post__title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h2>';
 			        the_content();
 			        echo '</article>';
-			        echo '<aside class="content__sidebar">';
-			        the_post_thumbnail('kl-rd__postimage');
-			        echo '</aside>';
 			        $backgroundimage = get_field( 'hintergrundbild' );
 		        }
 	        }
 	        ?>
         </section>
+        <aside class="sidebar">
+            <?php the_post_thumbnail('kl-rd__postimage');?>
+        </aside>
+        <div class="content__spacer"><br><br><br></div>
     </main>
+
     <style>
         body {
             background: url("<?php

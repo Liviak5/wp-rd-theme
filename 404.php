@@ -10,7 +10,7 @@
     <header class="header">
         <h1 class="main-title">
             <?php if (is_page()){wp_title('');}
-            else if (is_single()){single_post_title();}
+            elseif (is_single()){single_post_title();}
             else {single_cat_title();}?>
         </h1>
     </header>
