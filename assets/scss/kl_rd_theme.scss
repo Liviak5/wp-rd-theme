@@ -28,6 +28,8 @@ body{
 }
 
 .wrapper{
+  display: flex;
+  flex-direction: column;
   width: 100vw;
 }
 
@@ -72,12 +74,13 @@ header
 /*navigation*/
 
 .navigation{
-  position: relative;
-  left: -280px;
+  position: fixed;
+  top:0;
+  left: -300px;
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: auto;
+  height: 100vh;
   background-color: $primary-color;
   padding: 0 1rem;
   color: $secondary-font-color;
@@ -126,10 +129,10 @@ header
 /*Content*/
 
 .content{
-  height: calc(100vh - 250px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-top:10px solid $primary-color;
   &__section{
     width: 100%;
   }
@@ -166,8 +169,7 @@ Footer
  */
 
 .footer{
-  position: fixed;
-  bottom: 0;
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -202,6 +204,7 @@ Footer
   }
   .navigation{
     display: inline-block;
+    position: relative;
     left: 0;
     width: 100%;
     height: 50px;
@@ -260,6 +263,7 @@ Footer
     display: flex;
     flex-direction:row;
     justify-content: space-between;
+    border-top:0;
     &__section{
       width: 76%;
     }
@@ -276,5 +280,9 @@ Footer
       max-width: 70%;
       margin-bottom: 1rem;
     }
+  }
+  .footer{
+    position: fixed;
+    bottom: 0;
   }
 }
