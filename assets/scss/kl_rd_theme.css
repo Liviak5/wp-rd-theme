@@ -65,6 +65,19 @@ Fonts
 /*
 header
  */
+.hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  z-index: 1000; }
+  .hamburger:after {
+    content: url("../img/hamburger.svg"); }
+
 .header {
   display: flex;
   justify-content: center;
@@ -87,8 +100,6 @@ header
   color: #D3D3D3;
   z-index: 1000;
   transition: left 1s ease-in-out; }
-  .navigation:hover {
-    left: 0px; }
 
 .main-menu__list {
   padding: 1rem;
@@ -104,16 +115,7 @@ header
       text-decoration: none;
       color: #A4A586; }
   .main-menu__list .sub-menu li {
-    min-width: 200px;
-    padding: 0 1rem;
-    color: #a0a0a0;
-    line-height: 2rem;
-    list-style-type: none;
-    z-index: 1000; }
-    .main-menu__list .sub-menu li a {
-      color: #a0a0a0; }
-      .main-menu__list .sub-menu li a:focus {
-        color: #A4A586; }
+    display: none; }
 
 /*Content*/
 .content {
@@ -141,12 +143,15 @@ header
   width: 100%;
   margin: 1rem; }
   .sidebar__image {
-    max-width: 70%;
+    max-width: 50%;
     margin-bottom: 1rem; }
 
 /*
 Footer
  */
+footer .footer-menu {
+  display: none; }
+
 .footer {
   position: relative;
   display: flex;
@@ -156,21 +161,26 @@ Footer
   background-color: #4A4D45;
   padding: 0 1rem;
   color: #D3D3D3; }
+  .footer-menu {
+    display: block; }
+    .footer-menu__list {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none; }
+      .footer-menu__list a {
+        text-decoration: none;
+        color: #D3D3D3;
+        padding: 0 0 0 1rem; }
+        .footer-menu__list a:focus {
+          text-decoration: none;
+          color: #A4A586; }
 
-.sub-menu__list {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  padding-left: 0.3rem; }
-  .sub-menu__list a {
-    text-decoration: none;
-    color: #D3D3D3;
-    padding: 0 0.3rem; }
-    .sub-menu__list a:hover {
-      text-decoration: none;
-      color: #A4A586; }
+.fb-like {
+  margin-left: 1rem; }
 
 @media screen and (min-width: 450px) {
+  .hamburger {
+    display: none; }
   .header {
     height: 219px !important; }
   .main-title {
@@ -235,6 +245,17 @@ Footer
     .sidebar__image {
       max-width: 70%;
       margin-bottom: 1rem; }
+  footer .footer-menu {
+    display: block; }
+  nav .footer-menu {
+    display: none; }
   .footer {
     position: fixed;
-    bottom: 0; } }
+    bottom: 0; }
+    .footer-menu {
+      display: block; }
+      .footer-menu__list {
+        align-items: center; }
+        .footer-menu__list a:hover {
+          text-decoration: none;
+          color: #A4A586; } }

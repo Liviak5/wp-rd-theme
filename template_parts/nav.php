@@ -1,4 +1,4 @@
-<nav class="navigation clearfix">
+<nav id="mainnav" class="navigation clearfix">
     <?php
     $args = array(
         'theme_location'    => 'hauptmenu',
@@ -7,4 +7,14 @@
     );
     wp_nav_menu($args);
     ?>
+    <div class="footer-menu">
+		<?php
+		$imp = array(
+			'theme_location'    =>  'fuss',
+			'menu_class'        =>  'footer-menu__list',
+			'container_class'   => 'footer-menu__wrapper'
+		);
+		wp_nav_menu($imp);
+		?>
+    </div>
 </nav>

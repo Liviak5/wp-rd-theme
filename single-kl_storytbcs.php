@@ -33,23 +33,19 @@
                 ?>
             </section>
             <aside class="sidebar">
-                <?php if( get_field('cover')): ?>
-                    <img class="sidebar__image" src="<?php the_field('cover'); ?>" />
-                <?php endif; ?>
-
-                <?php if( get_field('pdf-download') ): ?>
-                    <h2 class="post__title">Buchdownload</h2>
-                    <a href="<?php the_field('pdf-download'); ?>" target="_blank">Download File</a>
-                <?php endif; ?>
-                <br><br>
-                <?php if( get_field('link') ): ?>
-                    <h2 class="post__title">Leseprobe</h2>
-                    <?php the_field('link')?>
-                <?php endif; ?>
-                <div class="content__spacer"><br><br><br></div>
+	            <?php $args = array(
+		            'type'              => 'alpha',
+		            'format'            => 'html',
+		            'show_post_count'   => false,
+		            'echo'              => 1,
+		            'order'             => 'ASC',
+		            'post_type'         => 'kl_storytbcs'
+	            );
+	            wp_get_archives( $args ); ?>
             </aside>
             <div class="content__spacer"><br><br><br></div>
         </main>
+
     <style>
         body {
             background: url("<?php

@@ -8,6 +8,4 @@
     <meta http-equiv="Pragma" content="no-cache">
     <title><?php bloginfo('name');?><?php wp_title(' :: ');?></title>
     <?php wp_head();?>
-</head>
-<body>
-<div class="wrapper">
+
