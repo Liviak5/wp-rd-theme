@@ -33,15 +33,7 @@
                 ?>
             </section>
             <aside class="sidebar">
-	            <?php $args = array(
-		            'type'              => 'alpha',
-		            'format'            => 'html',
-		            'show_post_count'   => false,
-		            'echo'              => 1,
-		            'order'             => 'ASC',
-		            'post_type'         => 'kl_storytbcs'
-	            );
-	            wp_get_archives( $args ); ?>
+               <?php the_post_thumbnail('kl-rd__postimage');?>
             </aside>
             <div class="content__spacer"><br><br><br></div>
         </main>
