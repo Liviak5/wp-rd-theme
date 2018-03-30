@@ -6,10 +6,15 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-function showMenu() {
-    document.getElementById('mainnav').style.left = 0;
-}
+ready(function () {
+    var hamburgerButton = document.getElementById('hamburger');
+    var mainNavigation = document.getElementById('mainnav');
 
+    hamburgerButton.addEventListener('click',showMenu);
 
+    function showMenu() {
+        mainNavigation.style.left = 0;
+    }
+});
 
 

@@ -6,7 +6,7 @@
     </style>
     </head>
     <body>
-    <button class="hamburger" onclick="showMenu()"></button>
+    <div class="nav__block"><button id="hamburger"></button></div>
     <div class="wrapper">
         <header class="header">
             <h1 class="main-title">
@@ -37,6 +37,7 @@
                 ?>
             </section>
             <aside class="sidebar">
+                <ul class="sidebar__list">
 	            <?php $args = array(
 		            'type'              => 'alpha',
 		            'format'            => 'html',
@@ -46,6 +47,7 @@
 		            'post_type'         => 'kl_storytbcs'
 	            );
 	            wp_get_archives( $args ); ?>
+                </ul>
             </aside>
             <div class="content__spacer"><br><br><br></div>
         </main>

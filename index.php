@@ -6,7 +6,7 @@
     </style>
     </head>
     <body>
-    <button class="hamburger" onclick="showMenu()"></button>
+    <div class="nav__block"><button id="hamburger"></button></div>
     <div class="wrapper">
         <header class="header">
             <h1 class="main-title">

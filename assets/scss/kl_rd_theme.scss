@@ -1,9 +1,10 @@
-@import "fonts";
-@import "colors";
+@import "fonts.scss";
+@import "colors.scss";
+@import "carousel.scss";
 
 /*univ*/
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -13,12 +14,12 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: $basetype;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-body{
-  background-size: cover!important;
-  background-attachment: fixed!important;
+body {
+  background-size: cover !important;
+  background-attachment: fixed !important;
 }
 
 *, *:before, *:after {
@@ -27,7 +28,7 @@ body{
   box-sizing: inherit;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -37,58 +38,71 @@ body{
 Fonts
  */
 
-.post__title{
+.post__title, h3 {
   font-family: $subtitle;
   font-size: 1rem;
   line-height: 1.5rem;
   text-transform: uppercase;
 
-  & a{
+  & a {
     text-decoration: none;
     color: $active-color;
   }
 }
 
-.main-title{
-  font-family:$title;
+.main-title {
+  margin-top: -1rem;
+  font-family: $title;
   color: $active-color;
-  text-align: center;
   font-size: 3rem;
   font-weight: lighter;
   letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.button, .wp-exclude-emoji, .wp-exclude-emoji .markItUpEditor {
+  padding: 0.5rem;
+  border-radius: 5px;
+  opacity: 0.5;
 }
 
 /*
 header
  */
-.hamburger{
-  position: fixed;
-  top: 0;
-  left: 0;
+#hamburger {
+  position: relative;
   width: 50px;
   height: 50px;
   padding: 0.5rem;
   background-color: transparent;
   border: none;
   z-index: 1000;
-  &:after{
+  &:after {
     content: url("../img/hamburger.svg");
   }
 }
-.header{
+
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw!important;
-  height: 150px!important;
-  background-size: cover!important;
+  width: 100vw !important;
+  height: 150px !important;
+  background-size: cover !important;
 }
 
 /*navigation*/
+.nav__block {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $primary-color;
+  height: 60px;
+}
 
-.navigation{
+.navigation {
   position: fixed;
-  top:0;
+  top: 0;
   left: -300px;
   display: flex;
   flex-direction: column;
@@ -101,25 +115,25 @@ header
   transition: left 1s ease-in-out;
 }
 
-.main-menu{
-  &__list{
+.main-menu {
+  &__list {
     padding: 1rem;
     list-style-type: none;
-    & li{
+    & li {
       line-height: 2rem;
       min-width: 100px;
     }
-    & a{
+    & a {
       text-decoration: none;
       color: $secondary-font-color;
       padding-right: 2rem;
 
-      &:focus{
+      &:focus {
         text-decoration: none;
         color: $hover-color;
       }
     }
-    & .sub-menu li{
+    & .sub-menu li {
       display: none;
     }
   }
@@ -127,49 +141,70 @@ header
 
 /*Content*/
 
-.content{
+.content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-top:10px solid $primary-color;
-  &__section{
+  border-top: 10px solid $primary-color;
+  &__section {
     width: 100%;
   }
-  &__post {
-    background-color: rgba(255,255,255,0.4);
+  &__post, &-front__post {
+    background-color: rgba(255, 255, 255, 0.4);
     flex-grow: 6;
-    margin: 1rem;
-    margin-left: 1rem;
-    margin-right: 2rem;
-    padding: 1rem;
+    margin: 1rem 2rem 1rem 1rem;
+    padding: 3rem;
     border-radius: 10px;
     line-height: 1.8rem;
 
-    & a{
+    & a {
       text-decoration: none;
       color: $active-color;
     }
+    & .noBackground{
+      background-color: transparent;
+    }
   }
+  &__img {
+    margin: 0rem 0.5rem;
+  }
+
 }
 
-.sidebar{
+.sidebar {
   order: -1;
   width: 100%;
   margin: 1rem;
 
-  &__image{
+  &__image {
     max-width: 50%;
     margin-bottom: 1rem;
   }
+
+  &__list {
+    list-style-type: none;
+    line-height: 1.8rem;
+  }
+  & a {
+    color: $font-color;
+    &:visited {
+      color: darken($active-color, 10);
+    }
+  }
+}
+
+.gwolle_gb_notice {
+  font-size: 0.7rem;
 }
 
 /*
 Footer
  */
-footer .footer-menu{
+footer .footer-menu {
   display: none;
 }
-.footer{
+
+.footer {
   position: relative;
   display: flex;
   align-items: center;
@@ -177,18 +212,19 @@ footer .footer-menu{
   height: 50px;
   background-color: $primary-color;
   padding: 0 1rem;
+  font-size: 0.75rem;
   color: $secondary-font-color;
-  &-menu{
+  &-menu {
     display: block;
-    &__list{
+    &__list {
       display: flex;
       flex-direction: column;
       list-style-type: none;
-      & a{
+      & a {
         text-decoration: none;
         color: $secondary-font-color;
         padding: 0 0 0 1rem;
-        &:focus{
+        &:focus {
           text-decoration: none;
           color: $hover-color;
         }
@@ -198,22 +234,21 @@ footer .footer-menu{
 
 }
 
-
-.fb-like{
+.fb-like {
   margin-left: 1rem;
 }
 
-@media screen and(min-width: 450px) {
-  .hamburger{
-    display: none;
+@media screen and(min-width: 680px) {
+  .header {
+    height: 219px !important;
   }
-  .header{
-    height: 219px!important;
-  }
-  .main-title{
+  .main-title {
     font-size: 5rem;
   }
-  .navigation{
+  .nav__block {
+    display: none;
+  }
+  .navigation {
     display: inline-block;
     position: relative;
     left: 0;
@@ -223,26 +258,26 @@ footer .footer-menu{
     margin-top: -3px;
     transition: none;
   }
-  .main-menu{
-    &__list{
+  .main-menu {
+    &__list {
       padding: 0 1rem;
       list-style-type: none;
-      & li{
+      & li {
         line-height: 50px;
         float: left;
         min-width: 100px;
       }
-      & a{
+      & a {
         text-decoration: none;
         color: $secondary-font-color;
         padding-right: 2rem;
 
-        &:hover{
+        &:hover {
           text-decoration: none;
           color: $hover-color;
         }
       }
-      & .sub-menu li{
+      & .sub-menu li {
         display: none;
         position: relative;
         clear: both;
@@ -254,59 +289,64 @@ footer .footer-menu{
         background-color: #FFFFFF;
         list-style-type: none;
         z-index: 1000;
-        border: 1px solid lighten($primary-color,50%);
+        border: 1px solid lighten($primary-color, 50%);
         border-collapse: collapse;
-        & a{
+        & a {
           color: $font-color;
-          &:hover{
+          &:hover {
             color: $hover-color;
           }
         }
       }
 
-      & li:hover .sub-menu li{
+      & li:hover .sub-menu li {
         display: block;
       }
     }
   }
-  .content{
+  .content {
     height: calc(100vh - 317px);
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-between;
-    border-top:0;
-    &__section{
+    border-top: 0;
+    &__section {
       width: 76%;
     }
     &__post {
       margin-left: 24%;
     }
+
+    &-front__post{
+      margin-left: 40%;
+      width: 45%;
+    }
   }
-  .sidebar{
+  .sidebar {
     order: 0;
     width: 24%;
     margin: 1rem;
 
-    &__image{
+    &__image {
       max-width: 70%;
       margin-bottom: 1rem;
     }
   }
-  footer .footer-menu{
+  footer .footer-menu {
     display: block;
   }
-  nav .footer-menu{
+  nav .footer-menu {
     display: none;
   }
-  .footer{
+  .footer {
     position: fixed;
     bottom: 0;
-    &-menu{
+    &-menu {
       display: block;
-      &__list{
+      &__list {
         align-items: center;
-        & a{
-          &:hover{
+        & a {
+          &:hover {
             text-decoration: none;
             color: $hover-color;
           }

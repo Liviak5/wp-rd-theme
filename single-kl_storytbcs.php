@@ -6,7 +6,7 @@
     </style>
     </head>
     <body>
-    <button class="hamburger" onclick="showMenu()"></button>
+    <div class="nav__block"><button id="hamburger"></button></div>
     <div class="wrapper">
         <header class="header">
             <h1 class="main-title">
@@ -26,11 +26,13 @@
                         echo '<article class="content__post">';
                         echo '<h2 class="post__title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h2>';
                         the_content();
+	                    echo get_previous_post_link('%link','zurück').' | '. get_next_post_link('%link','weiterlesen');
                         echo '</article>';
                         $backgroundimage = get_field( 'hintergrundbild' );
                     }
                 }
                 ?>
+
             </section>
             <aside class="sidebar">
                <?php the_post_thumbnail('kl-rd__postimage');?>
