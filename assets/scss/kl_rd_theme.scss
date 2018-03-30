@@ -258,6 +258,8 @@ footer .footer-menu {
     margin-top: -3px;
     transition: none;
   }
+
+  ul.sub-menu { position: absolute; }
   .main-menu {
     &__list {
       padding: 0 1rem;
