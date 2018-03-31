@@ -1,0 +1,17 @@
+/*
+Header
+ */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw !important;
+  height: 150px !important;
+  background-size: cover !important;
+}
+
+@media screen and(min-width: 680px) {
+  .header {
+    height: 219px !important;
+  }
+}

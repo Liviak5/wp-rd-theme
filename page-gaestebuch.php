@@ -29,7 +29,7 @@
 			if ( have_posts() ) {
 				while ( have_posts() ) {
 					the_post();
-					echo '<div class="content__post noBackground">';
+					echo '<div class="content__post no-bg">';
 					echo '<h2 class="post__title">LIEBER LESER</h2>';
 					the_content();
 					echo '</div>';

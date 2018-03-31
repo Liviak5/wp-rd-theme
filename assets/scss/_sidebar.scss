@@ -1,0 +1,33 @@
+/* sidebar */
+.sidebar {
+  order: -1;
+  width: 100%;
+  margin: 1rem;
+  &__image {
+    max-width: 50%;
+    margin-bottom: 1rem;
+  }
+  &__list {
+    list-style-type: none;
+    line-height: 1.8rem;
+  }
+  & a {
+    color: $font-color;
+    &:visited {
+      color: darken($active-color, 10);
+    }
+  }
+}
+
+@media screen and(min-width: 680px) {
+  .sidebar {
+    order: 0;
+    width: 24%;
+    margin: 1rem;
+
+    &__image {
+      max-width: 70%;
+      margin-bottom: 1rem;
+    }
+  }
+}

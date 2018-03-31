@@ -1,0 +1,31 @@
+/*
+Typo
+ */
+
+.post__title, h3 {
+  font-family: $subtitle;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+
+  & a {
+    text-decoration: none;
+    color: $active-color;
+  }
+}
+
+.main-title {
+  margin-top: -1rem;
+  font-family: $title;
+  color: $active-color;
+  font-size: 3rem;
+  font-weight: lighter;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+@media screen and(min-width: 680px) {
+  .main-title {
+    font-size: 5rem;
+  }
+}
