@@ -151,7 +151,7 @@ Carousel
     justify-content: center;
     display: none;
     width: 100vw;
-    height: calc(100vh - 110px);
+    height: calc(100vh - 96px);
     transition: transform 0.6s ease;
     backface-visibility: hidden;
     perspective: 1000px; }
@@ -406,6 +406,11 @@ Content
       background-color: transparent; }
   .content__img {
     margin: 0 0.5rem; }
+  .content-front {
+    display: flex;
+    position: absolute;
+    top: 46px;
+    height: calc(100vh - 100px); }
 
 @media screen and (min-width: 680px) {
   .content {
@@ -425,7 +430,7 @@ Content
 /*
 Footer-Navigation
  */
-footer.footer-menu {
+footer .footer-menu {
   display: none; }
 
 .footer {
@@ -482,6 +487,9 @@ Typo
   .post__title a, h3 a {
     text-decoration: none;
     color: #95711C; }
+
+h2.typo-front-page {
+  text-align: center; }
 
 .main-title {
   margin-top: -1rem;

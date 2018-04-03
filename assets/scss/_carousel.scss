@@ -16,7 +16,7 @@ Carousel
     justify-content: center;
     display: none;
     width: 100vw;
-    height: calc(100vh - 110px);
+    height: calc(100vh - 96px);
     @include transition($carousel-transition);
     backface-visibility: hidden;
     perspective: 1000px;

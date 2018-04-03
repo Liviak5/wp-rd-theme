@@ -35,15 +35,15 @@
 					echo '</div>';
 					echo '<article class="content__post">';
 					echo '<div class="comment__list">';
-					echo '<br>';
-					wp_list_comments( array(
-						'style' => 'div'
-					) );
+					get_template_part( 'template_parts/comments' );
 					echo '</div>';
 					echo '</article>';
+					echo '<br>';
+					echo '<br>';
 					$backgroundimage = get_field( 'hintergrundbild' );
 				}
 			}
+
 			?>
         </section>
     </main>
