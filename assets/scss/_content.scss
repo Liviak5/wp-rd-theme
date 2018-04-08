@@ -29,16 +29,6 @@ Content
     margin: 0 0.5rem;
   }
 }
-.lazy{
-  display: flex;
-  position: absolute;
-  top: 46px;
-  height: calc(100vh - 96px);
-}
-.slide{
-  background-size: cover !important;
-  background-attachment: fixed !important;
-}
 
 @media screen and(min-width: 680px) {
   .content {
