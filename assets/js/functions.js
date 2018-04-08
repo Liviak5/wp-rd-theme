@@ -1,3 +1,5 @@
+"use strict";
+
 (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -15,6 +17,5 @@ ready(function () {
     function showMenu() {
         mainNavigation.style.left = 0;
     }
+
 });
-
-

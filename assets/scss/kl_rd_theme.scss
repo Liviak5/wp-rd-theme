@@ -1,8 +1,5 @@
 @import "wp_core.scss";
 @import "fonts.scss";
-@import "variables.scss";
-@import "mixins/transition.scss";
-@import "mixins/hover.scss";
 @import "colors.scss";
 
 /*univ*/
@@ -36,7 +33,7 @@ body {
   flex-direction: column;
   width: 100vw;
 }
-@import "carousel.scss";
+
 @import "header.scss";
 @import "main-nav.scss";
 @import "content.scss";

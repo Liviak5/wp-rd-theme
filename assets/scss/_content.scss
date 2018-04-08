@@ -28,12 +28,16 @@ Content
   &__img {
     margin: 0 0.5rem;
   }
-  &-front {
-    display: flex;
-    position: absolute;
-    top: 46px;
-    height: calc(100vh - 100px);
-  }
+}
+.lazy{
+  display: flex;
+  position: absolute;
+  top: 46px;
+  height: calc(100vh - 96px);
+}
+.slide{
+  background-size: cover !important;
+  background-attachment: fixed !important;
 }
 
 @media screen and(min-width: 680px) {
@@ -49,9 +53,11 @@ Content
     &__post {
       margin-left: 24%;
     }
-    &-front__post {
-      margin-left: 40%;
-      width: 45%;
+    &-front {
+      &__post {
+        margin-left: 40%;
+        width: 45%;
+      }
     }
   }
 }

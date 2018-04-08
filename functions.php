@@ -61,3 +61,5 @@ if (!is_admin()){
 	wp_enqueue_script('kl_rd_domready', get_bloginfo('template_url').'/assets/js/domReady.js');
 	wp_enqueue_script('kl_rd_func', get_bloginfo('template_url').'/assets/js/functions.js');
 }
+
+

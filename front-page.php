@@ -1,64 +1,41 @@
 <?php get_header(); ?>
-    <style>
-        div.carousel-item {
-            background-image: url("<?php background_image(); ?>");
-            background-size: cover !important;
-            background-attachment: fixed !important;
-        }
-    </style>
-    <div class="nav__block">
-        <button id="hamburger"></button>
-    </div>
-<?php get_template_part( 'template_parts/nav' ); ?>
+    <link rel="stylesheet" href="assets/slick-1.8.0/slick/slick.css">
+    <link rel="stylesheet" href="assets/slick-1.8.0/slick/slick-theme.css">
+    </head>
     <body>
-<main class="content-front">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <h1 class="main-title"><?php bloginfo( 'name' ) ?></h1>
-                <h2 class="post__title typo-front-page"><?php bloginfo( 'description' )?></h2>
-            </div>
-			<?php
-			if ( have_rows( 'slides' ) ) {
-				while ( have_rows( 'slides' ) ) {
-					the_row();
-					$backgroundimage = get_sub_field('backgroundimage');
-					echo '<div class="carousel-item" style="background-image: url("'.$backgroundimage.'");">';
-					echo '<article class="content-front__post">';
-					the_sub_field( 'teaser' );
-					the_sub_field( 'maincontent' );
-					echo '</article>';
-					echo '</div>';
-				}
-			}
-			?>
+        <div class="nav__block">
+            <button id="hamburger"></button>
         </div>
-
-		<?php if ( have_rows( 'slides' ) ):
-			while ( have_rows( 'slides' ) ) : the_row();
-				?>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only" title="Previous"></span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only" title="Next"></span>
-                </a>
-
-			<?php
-			endwhile;
-		endif;
-		?>
-    </div>
-</main>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-<?php get_footer(); ?>
+        <?php get_template_part( 'template_parts/nav' ); ?>
+        <!--TODO: Der Slider sollte über die ganze Seite gehen und Sliden :-)-->
+            <main class="lazy slider" data-sizes="100vw">
+                <div class="slide" style="background-image: url(<?php background_image(); ?>)">
+                    <h1 class="main-title"><?php bloginfo( 'name' ) ?></h1>
+                    <h2 class="post__title typo-front-page"><?php bloginfo( 'description' ) ?></h2>
+                </div>
+                <?php
+                if ( have_rows( 'slides' ) ) {
+                    while ( have_rows( 'slides' ) ) {
+                        the_row();
+                        $backgroundimage = get_sub_field( 'backgroundimage' );
+                        echo '<div class="slide" style="background-image: url(' . $backgroundimage . ')">';
+                        echo '<article class="content-front__post">';
+                        the_sub_field( 'teaser' );
+                        the_sub_field( 'maincontent' );
+                        echo '</article>';
+                        echo '</div>';
+                    }
+                }
+                ?>
+            </main>
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="assets/slick-1.8.0/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            $(document).ready(function () {
+                $(".lazy").slick({
+                    lazyLoad: 'ondemand', // ondemand progressive anticipated
+                    infinite: true
+                });
+            });
+        </script>
+        <?php get_footer(); ?>
