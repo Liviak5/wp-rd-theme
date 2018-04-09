@@ -4,6 +4,7 @@
  */
 require_once('library/cpt-books.php');
 require_once('library/cpt-storytelling.php');
+require_once( 'library/class-foundationpress-comments.php' );
 
 /**
  * register Sidebars
