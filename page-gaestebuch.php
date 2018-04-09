@@ -36,6 +36,7 @@
 					echo '<article class="content__post">';
 					echo '<div class="comment__list">';
 					get_template_part( 'template_parts/comments' );
+          // comments_template(); // TODO Livia: nach Bedarf obige Zeile auskommentieren und dafür diese Zeile aktivieren
 					echo '</div>';
 					echo '</article>';
 					echo '<br>';
