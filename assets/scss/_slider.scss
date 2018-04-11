@@ -1,10 +1,18 @@
-.lazy{
+/**
+Slider
+ */
+
+.slider-for{
   display: flex;
   position: absolute;
   top: 46px;
   height: calc(100vh - 96px);
+
 }
 .slide{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100vw;
   background-size: cover;
   background-attachment: fixed;

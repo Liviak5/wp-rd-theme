@@ -13,11 +13,26 @@
   z-index: 1000;
   transition: left 1s ease-in-out;
   &__block {
+    position: relative;
+    width: 100vw;
+    left: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     background-color: $primary-color;
     height: 60px;
+    &--frontpage {
+      position: fixed;
+      width: 100vw;
+      left: 0;
+      top: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: $primary-color;
+      height: 60px;
+      z-index: 1000;
+    }
   }
 }
 
@@ -55,8 +70,19 @@
     padding: 0 1rem;
     margin-top: -3px;
     transition: none;
+    &--frontpage{
+      display: inline-block;
+      position: fixed;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      transition: none;
+    }
     &__block {
       display: none;
+      &--frontpage {
+        display: none;
+      }
     }
   }
 

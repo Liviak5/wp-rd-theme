@@ -26,6 +26,10 @@ h2.typo-front-page{
   font-weight: lighter;
   letter-spacing: 0.2rem;
   text-align: center;
+  line-height: 3.5rem;
+  &.typo-front-page{
+    line-height: 6rem;
+  }
 }
 
 @media screen and(min-width: 680px) {

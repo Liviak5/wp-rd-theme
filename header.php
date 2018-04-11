@@ -8,4 +8,20 @@
     <meta http-equiv="Pragma" content="no-cache">
     <title><?php bloginfo('name');?><?php wp_title(' :: ');?></title>
     <?php wp_head();?>
-
+    <style>
+        .header{
+            background-image:url("<?php header_image(); ?>");
+        }
+    </style>
+</head>
+<body>
+<div class="nav__block"><button id="hamburger"></button></div>
+<div class="wrapper">
+    <header class="header">
+        <h1 class="main-title">
+			<?php if (is_page()){wp_title('');}
+            elseif (is_single()){single_post_title();}
+			else {single_cat_title();}?>
+        </h1>
+    </header>
+	<?php get_template_part('template_parts/nav'); ?>
