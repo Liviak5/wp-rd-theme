@@ -1,0 +1,40 @@
+/**
+Comments
+ */
+#commentform {
+  border-bottom: 1px solid $active-color;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.comment {
+  &__form {
+    &-item {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.7rem;
+      margin-top: 1rem;
+      & input, & textarea {
+        border-radius: 2px;
+        border: none;
+        padding: 0.5rem;
+        font-family: $basetype;
+        font-size: 1rem;
+      }
+    }
+  }
+  &__list {
+    &-item {
+      text-decoration: none;
+      list-style-type: none;
+    }
+  }
+  &-author {
+    display: flex;
+    align-items: flex-end;
+    margin: 2rem 0 0.5rem;
+    & img {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: Gaestebuch
+*/
+get_header(); ?>
     <style>
         .header {
             background-image: url("<?php header_image(); ?>");
@@ -34,10 +38,7 @@
 					the_content();
 					echo '</div>';
 					echo '<article class="content__post">';
-					echo '<div class="comment__list">';
-					get_template_part( 'template_parts/comments' );
-          // comments_template(); // TODO Livia: nach Bedarf obige Zeile auskommentieren und dafür diese Zeile aktivieren
-					echo '</div>';
+                    comments_template();
 					echo '</article>';
 					echo '<br>';
 					echo '<br>';
