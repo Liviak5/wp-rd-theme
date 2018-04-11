@@ -17,12 +17,11 @@ get_header(); ?>
 					echo '<article class="content__post">';
                     comments_template();
 					echo '</article>';
-					echo '<br>';
-					echo '<br>';
 					$backgroundimage = get_field( 'hintergrundbild' );
 				}
 			}
-
+			echo '<br>';
+			echo '<br>';
 			?>
         </section>
     </main>

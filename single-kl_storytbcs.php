@@ -11,6 +11,7 @@
                         the_content();
 	                    echo get_previous_post_link('%link','zurück').' | '. get_next_post_link('%link','weiterlesen');
                         echo '</article>';
+	                    echo '<br><br>';
                         $backgroundimage = get_field( 'hintergrundbild' );
                     }
                 }

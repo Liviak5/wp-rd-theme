@@ -13,6 +13,7 @@
                         $backgroundimage = get_field( 'hintergrundbild' );
                     }
                 }
+                echo '<br><br>';
                 ?>
             </section>
             <aside class="sidebar">

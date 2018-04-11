@@ -10,6 +10,7 @@
 					echo '<h2 class="post__title">' . get_the_title() . '</h2>';
 					the_content();
 					echo '</article>';
+
 					$backgroundimage = get_field( 'hintergrundbild' );
 				}
 			}
@@ -25,6 +26,7 @@
 				};
 				echo '</article>';
 			}
+			echo '<br><br>';
 
 			?>
         </section>
