@@ -19,3 +19,15 @@ Buttons
     content: url("../img/hamburger.svg");
   }
 }
+
+.egde{
+  position: relative;
+  align-self: flex-end;
+  top: 0;
+  background-color: transparent;
+  border: none;
+  &:after{
+    content: url("../img/edge.png");
+
+  }
+}

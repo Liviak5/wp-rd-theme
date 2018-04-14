@@ -1,21 +1,25 @@
 "use strict";
-
-(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.8";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
 ready(function () {
     var hamburgerButton = document.getElementById('hamburger');
     var mainNavigation = document.getElementById('mainnav');
-
-    hamburgerButton.addEventListener('click',showMenu);
+    var edge = document.querySelectorAll('.egde');
+    /**
+     * Navigation in Mobile ein und ausblenden
+     */
+    hamburgerButton.addEventListener('click', showMenu);
 
     function showMenu() {
-       mainNavigation.classList.toggle('hidden');
+        mainNavigation.classList.toggle('hidden');
     }
+
+    function showMoreContent(e) {
+      e.target.parentElement.children.item(1).classList.toggle('visible-content');
+      e.target.parentElement.children.item(2).classList.toggle('visible-content');
+    }
+
+    edge.forEach(function(buttonEgde) {
+        buttonEgde.addEventListener('click', showMoreContent);
+    });
+
 
 });

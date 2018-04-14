@@ -11,11 +11,18 @@ if ( have_rows( 'slides' ) ) : ?>
 	while ( have_rows( 'slides' ) ) : the_row();
 		$backgroundimage = get_sub_field( 'backgroundimage' ); ?>
         <div class="slide" style="background-image: url(<?php echo $backgroundimage['url'] ?>)">
-            <div class="content-front__post">
-				<?php
-				the_sub_field( 'teaser' );
-				the_sub_field( 'maincontent' );
-				?>
+            <div class="content__post--front">
+                <button class="egde"></button>
+                <div class="content__teaser--front visible-content">
+	                <?php
+	                the_sub_field( 'teaser' );
+	                ?>
+                </div>
+				<div class="content__main--front">
+					<?php
+					the_sub_field( 'maincontent' );
+					?>
+                </div>
             </div>
         </div>
 	<?php
