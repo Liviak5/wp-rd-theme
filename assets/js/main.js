@@ -15,7 +15,7 @@ ready(function () {
     hamburgerButton.addEventListener('click',showMenu);
 
     function showMenu() {
-        mainNavigation.style.left = 0;
+       mainNavigation.classList.toggle('hidden');
     }
 
 });

@@ -169,8 +169,8 @@ Header
 /*navigation*/
 .nav {
   position: fixed;
+  left: 0;
   top: 0;
-  left: -300px;
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -200,6 +200,9 @@ Header
       background-color: #4A4D45;
       height: 60px;
       z-index: 1000; }
+
+.hidden {
+  left: -300px; }
 
 .main-menu__list {
   padding: 1rem;

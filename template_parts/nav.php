@@ -1,4 +1,4 @@
-<nav id="mainnav" class="nav clearfix">
+<nav id="mainnav" class="nav clearfix hidden">
     <?php
     $args = array(
         'theme_location'    => 'hauptmenu',
