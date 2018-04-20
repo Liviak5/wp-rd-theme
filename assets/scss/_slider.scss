@@ -2,18 +2,19 @@
 Slider
  */
 
-.slider-for{
+.slider-for {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 46px;
   height: calc(100vh - 96px);
-
 }
-.slide{
+
+.slide {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100vw;
   background-size: cover;
-  background-attachment: fixed;
 }

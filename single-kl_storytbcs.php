@@ -9,7 +9,8 @@
                         echo '<article class="content__post">';
                         echo '<h2 class="post__title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h2>';
                         the_content();
-	                    echo get_previous_post_link('%link','zurück').' | '. get_next_post_link('%link','weiterlesen');
+                        echo '<div class="content__post-links">';
+	                    echo '<div class="content__post-links--prev">'.get_previous_post_link('%link','zurück |').'</div><div class="content__post-links--next">'. get_next_post_link('%link','| weiterlesen').'</div>';
                         echo '</article>';
 	                    echo '<br><br>';
                         $backgroundimage = get_field( 'hintergrundbild' );

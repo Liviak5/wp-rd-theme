@@ -113,6 +113,8 @@ Slider
  */
 .slider-for {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 46px;
   height: calc(100vh - 96px); }
@@ -122,8 +124,7 @@ Slider
   flex-direction: column;
   justify-content: center;
   width: 100vw;
-  background-size: cover;
-  background-attachment: fixed; }
+  background-size: cover; }
 
 /*univ*/
 * {
@@ -315,6 +316,9 @@ Content
     padding: 3rem; }
     .content__post--front {
       padding: 0 0 3rem 3rem; }
+    .content__post-links {
+      display: flex;
+      flex-direction: row; }
   .content__img {
     margin: 0 0.5rem; }
 

@@ -44,6 +44,10 @@ Content
     &--front{
       padding: 0 0 3rem 3rem;
     }
+    &-links{
+      display: flex;
+      flex-direction: row;
+    }
   }
   &__img {
     margin: 0 0.5rem;

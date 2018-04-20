@@ -1,7 +1,9 @@
 jQuery(document).ready(function($){
-    $('.single-item').slick({
-        slidesToShow: 1,
+    $('.slider-for').slick({
+        lazyLoad: 'ondemand',
+        infinite: true,
         arrows: true,
-        fade: true
+        dots: true,
+        mobileFirst: true
     });
 });
