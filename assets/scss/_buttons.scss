@@ -31,3 +31,13 @@ Buttons
 
   }
 }
+
+.home-image{
+  background-position: left;
+  background-repeat: no-repeat;
+  background-image: url(../img/home_icon.svg);
+}
+
+*::-webkit-scrollbar{
+  display: none;
+}

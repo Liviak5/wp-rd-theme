@@ -15,8 +15,33 @@ Typo
 }
 
 h2.typo-front-page{
-  margin-top: 2rem;
+  margin: 2rem auto 0 auto;
+  padding: 1.5rem;
   text-align: center;
+  font-size: 1.1rem;
+  width: 50%;
+  background-color: lighten($secondary-font-color,5%);
+  box-shadow: 6px 6px 6px #000;
+  border-radius: 4px;
+  &:hover{
+    background-color: lighten($secondary-font-color,20%);
+  }
+  & a{
+    color: black;
+  }
+}
+
+h4, h5{
+  font-size: 0.9rem;
+  font-family: $subtitle;
+  margin-top: 0.5rem;
+}
+
+blockquote{
+  font-family: $title;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
 }
 
 .main-title {

@@ -6,9 +6,9 @@ Slider
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: absolute;
-  top: 46px;
-  height: calc(100vh - 96px);
+  position: relative;
+  top: 50px;
+  height: calc(100vh - 100px);
 }
 
 .slide {
@@ -17,4 +17,11 @@ Slider
   justify-content: center;
   width: 100vw;
   background-size: cover;
+}
+
+@media screen and(min-width: 680px) {
+  .slider-for {
+    top: -5px;
+    height: calc(100vh - 96px);
+  }
 }

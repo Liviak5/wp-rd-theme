@@ -7,7 +7,6 @@
 				while ( have_posts() ) {
 					the_post();
 					echo '<article class="content__post">';
-					echo '<h2 class="post__title">' . get_the_title() . '</h2>';
 					the_content();
 					echo '</article>';
 
@@ -15,13 +14,13 @@
 				}
 			}
 
-			$images = get_field( 'bildergalerie');
+			$images = get_field( 'bildergalerie' );
 			$size   = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
-			if ($images) {
-				echo '<article class="content__post">';
+			if ( $images ) {
+				echo '<article class="content__post--galerie">';
 				foreach ( $images as $image ) {
-					echo '<span class="content__img"> <a href="'. $image['url'].'">';
-					echo '<img src="'.$image['sizes']['thumbnail'].'" alt="'.$image['alt'].'"/>';
+					echo '<span class="content__img"> <a href="' . $image['url'] . '">';
+					echo '<img src="' . $image['sizes']['kl-rd__postimage'] . '" alt="' . $image['alt'] . '"/>';
 					echo '</a></span>';
 				};
 				echo '</article>';
@@ -35,16 +34,20 @@
                 <img class="sidebar__image" src="<?php the_field( 'cover' ); ?>"/>
 			<?php endif; ?>
 
-			<?php if ( get_field( 'pdf-download' ) ): ?>
-                <h2 class="post__title">Buchdownload</h2>
-                <a href="<?php the_field( 'pdf-download' ); ?>" target="_blank">Download File</a>
-			<?php endif; ?>
-            <br>
+			<?php
+			if ( have_rows( 'pdf-download' ) ):
+				echo '<h3>Downloads</h3>';
+				while ( have_rows( 'pdf-download' ) ) : the_row();
+				    $pdf = get_sub_field( 'pdf' );
+					echo '<h4><a href="' . $pdf['url'] . '">'. $pdf['title'] .'</a></h4>';
+				endwhile;
+			endif;
+			?>
 			<?php
 			$link = get_field( 'link' );
 			if ( $link ): ?>
-                <a class="button" href="<?php echo $link['url']; ?>"
-                   target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+            <h4><a href="<?php echo $link['url']; ?>"
+                   target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a></h4>
 			<?php endif; ?>
             <div class="content__spacer"><br><br><br></div>
         </aside>

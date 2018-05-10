@@ -31,6 +31,7 @@ function klAddBookpages() {
 		'supports'              =>  array('title', 'thumbnail', 'editor'),
 		'has_archive'           =>  true,
 		'menu_icon'             =>  'dashicons-book-alt',
+		'show_in_nav_menus'     =>  true,
 	);
 
 	register_post_type('kl_bookpages', $args);

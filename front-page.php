@@ -3,9 +3,9 @@
 <?php
 if ( have_rows( 'slides' ) ) : ?>
 <div class="slider-for">
-    <div class="slide" style="background-image: url(<?php background_image(); ?>)">
+    <div class="slide" style="background-image: url(<?php echo get_bloginfo('template_url').'/assets/img/home.jpg';?>)">
         <h1 class="main-title typo-front-page"><?php bloginfo( 'name' ) ?></h1>
-        <h2 class="post__title typo-front-page"><?php bloginfo( 'description' ) ?></h2>
+        <h2 class="post__title typo-front-page"><a href="https://rodneydent.ch/category/geschichten"><?php bloginfo( 'description' ) ?></a></h2>
     </div>
 	<?php
 	while ( have_rows( 'slides' ) ) : the_row();
@@ -27,8 +27,8 @@ if ( have_rows( 'slides' ) ) : ?>
         </div>
 	<?php
 	endwhile;
-	endif;
 	?>
 </div>
+    <?php endif; ?>
 </main>
 <?php get_footer(); ?>
