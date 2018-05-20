@@ -13,19 +13,14 @@
   z-index: 1000;
   transition: left 1s ease-in-out;
   &__block {
-    position: relative;
     width: 100vw;
-    left: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     background-color: $primary-color;
     height: 60px;
     &--frontpage {
-      position: fixed;
       width: 100vw;
-      left: 0;
-      top: 0;
       display: flex;
       justify-content: flex-end;
       align-items: center;

@@ -2,9 +2,13 @@
 Content
 */
 .content {
-  display: block;
   width: 100vw;
   border-top: 10px solid $primary-color;
+  height: calc(100vh - 260px);
+  overflow: scroll;
+  &__spacer{
+    margin-top: 50px;
+  }
   &__teaser--front {
     display: none;
     line-height: 2.5rem;
@@ -28,7 +32,6 @@ Content
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.4);
-    flex-grow: 6;
     margin: 1rem .7rem;
     border-radius: 10px;
     line-height: 1.8rem;
@@ -54,7 +57,6 @@ Content
       display: flex;
       flex-wrap: wrap;
       background-color: rgba(255, 255, 255, 0.4);
-      flex-grow: 6;
       margin: 1rem 1rem 1rem 1rem;
       border-radius: 10px;
       line-height: 1.8rem;

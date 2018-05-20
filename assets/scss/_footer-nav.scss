@@ -6,8 +6,6 @@ footer .footer-menu {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
   display: flex;
   align-items: center;
   width: 100%;
@@ -48,8 +46,6 @@ footer .footer-menu {
     display: none;
   }
   .footer {
-    position: fixed;
-    bottom: 0;
     &-menu {
       display: block;
       &__list {

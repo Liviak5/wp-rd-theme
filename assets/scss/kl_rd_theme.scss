@@ -32,7 +32,9 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: stretch;
   width: 100vw;
+  height: 100vh;
 }
 
 @import "header.scss";
