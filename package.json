@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/Liviak5/wp-rd-theme#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.2.1"
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "gulp-sass": "^4.0.1"
   }
 }

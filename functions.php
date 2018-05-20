@@ -60,9 +60,9 @@ add_action( 'init', 'klRdImages' );
 
 /*Add Styles*/
 if ( ! is_admin() ) {
-	wp_enqueue_style( 'kl_rd_theme', get_bloginfo( 'template_url' ) . '/assets/css/kl_rd_theme.css' );
 	wp_enqueue_style( 'slickcss', get_bloginfo( 'template_url' ) . '/assets/css/slick.css' );
 	wp_enqueue_style( 'slicktheme', get_bloginfo( 'template_url' ) . '/assets/css/slick-theme.css' );
+	wp_enqueue_style( 'kl_rd_theme', get_bloginfo( 'template_url' ) . '/assets/css/kl_rd_theme.css' );
 }
 
 function slick_slider_js() {

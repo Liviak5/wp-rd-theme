@@ -1,4 +1,3 @@
-</div>
 <footer class="footer">
     <div id="fb-root"></div>
     <p>© 2016 Orlando Kobler</p>
@@ -16,6 +15,7 @@
     <p>&nbsp;|</p>
     <div class="fb-like" data-href="https://rodneydent.ch" data-layout="button_count" data-action="recommend" data-show-faces="true" data-share="true"></div>
 </footer>
+</div>
 <?php wp_footer();?>
 </body>
 </html>

@@ -10,6 +10,7 @@
     <?php wp_head();?>
 </head>
 <body>
+<div class="wrapper">
 <div class="nav__block--frontpage">
     <button id="hamburger"></button>
 </div>

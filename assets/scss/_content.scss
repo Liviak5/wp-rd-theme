@@ -2,16 +2,15 @@
 Content
 */
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: block;
+  width: 100vw;
   border-top: 10px solid $primary-color;
   &__teaser--front {
     display: none;
     line-height: 2.5rem;
     font-size: 0.7rem;
     padding-right: 3rem;
-    overflow: scroll;
+    overflow-y: scroll;
     & blockquote {
       font-family: $title;
       font-size: 1.5rem;
@@ -30,7 +29,7 @@ Content
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.4);
     flex-grow: 6;
-    margin: 1rem 2rem 1rem 1rem;
+    margin: 1rem .7rem;
     border-radius: 10px;
     line-height: 1.8rem;
 
@@ -43,9 +42,9 @@ Content
     }
   }
   &__post {
-    padding: 3rem;
+    padding: 2rem;
     &--front {
-      padding: 0 0 3rem 3rem;
+      padding: 0 0 2rem 2rem;
     }
     &-links {
       display: flex;
@@ -56,10 +55,10 @@ Content
       flex-wrap: wrap;
       background-color: rgba(255, 255, 255, 0.4);
       flex-grow: 6;
-      margin: 1rem 2rem 1rem 1rem;
+      margin: 1rem 1rem 1rem 1rem;
       border-radius: 10px;
       line-height: 1.8rem;
-      padding: 3rem;
+      padding: 2rem;
     }
   }
   &__img {

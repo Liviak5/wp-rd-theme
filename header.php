@@ -15,8 +15,9 @@
     </style>
 </head>
 <body>
-<div class="nav__block"><button id="hamburger"></button></div>
 <div class="wrapper">
+<div class="nav__block"><button id="hamburger"></button></div>
+
     <header class="header">
         <h1 class="main-title">
 			<?php if (is_page()){wp_title('');}
