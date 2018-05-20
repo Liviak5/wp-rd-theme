@@ -19,7 +19,6 @@
             <aside class="sidebar">
                 <?php the_post_thumbnail('kl-rd__postimage');?>
             </aside>
-            <div class="content__spacer"><br><br><br></div>
         </main>
 
     <style>

@@ -25,6 +25,7 @@ Buttons
   top: 0;
   background-color: transparent;
   border: none;
+  z-index: 700;
   &:after{
     content: url("../img/edge.png");
 

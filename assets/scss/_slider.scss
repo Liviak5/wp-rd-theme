@@ -5,9 +5,9 @@ Slider
 .slider-for {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: auto;
   margin-bottom: 0!important;
+  overflow-y: hidden;
 }
 
 .slide {
@@ -17,7 +17,7 @@ Slider
   width: 100vw;
   height: calc(100vh - 110px);
   background-size: cover;
-  overflow: hidden; ;
+  overflow-y: scroll;
 }
 .slick-list{
   width: 100%;
@@ -26,7 +26,9 @@ Slider
 
 @media screen and(min-width: 680px) {
   .slider-for {
-    top: -5px;
-    height: calc(100vh - 96px);
+    margin-top:-3px;
+  }
+  .slide {
+    height: calc(100vh - 97px);
   }
 }

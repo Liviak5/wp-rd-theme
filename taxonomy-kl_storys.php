@@ -19,8 +19,6 @@
 			<?php endforeach;
 			wp_reset_postdata();
 			?>
-            <br>
-            <br>
         </section>
         <aside class="sidebar">
             <ul class="sidebar__list">

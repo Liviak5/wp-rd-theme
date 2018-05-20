@@ -114,9 +114,9 @@ Slider
 .slider-for {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: auto;
-  margin-bottom: 0 !important; }
+  margin-bottom: 0 !important;
+  overflow-y: hidden; }
 
 .slide {
   display: flex;
@@ -125,7 +125,7 @@ Slider
   width: 100vw;
   height: calc(100vh - 110px);
   background-size: cover;
-  overflow: hidden; }
+  overflow-y: scroll; }
 
 .slick-list {
   width: 100%;
@@ -133,8 +133,9 @@ Slider
 
 @media screen and (min-width: 680px) {
   .slider-for {
-    top: -5px;
-    height: calc(100vh - 96px); } }
+    margin-top: -3px; }
+  .slide {
+    height: calc(100vh - 97px); } }
 
 /*univ*/
 * {
@@ -155,7 +156,8 @@ html {
 
 body {
   background-size: cover !important;
-  background-attachment: fixed !important; }
+  background-attachment: fixed !important;
+  -ms-overflow-style: none; }
 
 .wrapper {
   display: flex;
@@ -291,16 +293,18 @@ Header
 Content
 */
 .content {
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   border-top: 10px solid #4A4D45;
   height: calc(100vh - 260px);
-  overflow: scroll; }
-  .content__spacer {
-    margin-top: 50px; }
+  flex-grow: 4;
+  overflow-y: scroll; }
   .content__teaser--front {
     display: none;
     line-height: 2.5rem;
     font-size: 0.7rem;
+    max-height: 400px;
     padding-right: 3rem;
     overflow-y: scroll; }
     .content__teaser--front blockquote {
@@ -309,7 +313,7 @@ Content
   .content__main--front {
     display: none;
     padding-right: 3rem;
-    overflow: scroll; }
+    overflow-y: scroll; }
   .content__section {
     width: 100%; }
   .content__post, .content__post--front {
@@ -345,11 +349,11 @@ Content
       width: 90%; }
 
 .visible-content {
-  display: block; }
+  display: inline-block; }
 
 @media screen and (min-width: 680px) {
   .content {
-    height: calc(100vh - 317px);
+    height: calc(100vh - 260px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -490,7 +494,8 @@ Buttons
   align-self: flex-end;
   top: 0;
   background-color: transparent;
-  border: none; }
+  border: none;
+  z-index: 700; }
   .egde:after {
     content: url("../img/edge.png"); }
 
@@ -503,7 +508,8 @@ Buttons
 .sidebar {
   order: -1;
   width: 100%;
-  margin: 1rem; }
+  margin: 1rem;
+  flex-grow: 1; }
   .sidebar__image {
     max-width: 50%;
     margin-bottom: 1rem; }
